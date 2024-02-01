@@ -2,15 +2,15 @@
 # documentation: https://d.android.com/studio/projects/add-native-code.html
 
 # Sets the minimum version of CMake required to build the native library.
-
-cmake_minimum_required(VERSION 3.4.1)
+cmake_minimum_required(VERSION 3.20.0)
+project(native-lib)
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 
-include_directories($ENV{HOME}/local/src/boost_1_70_0)
+include_directories(/usr/local/include)
 
 file(GLOB_RECURSE PROJECT_SOURCE ./*.cpp)
 
